@@ -8,7 +8,7 @@ function getComputerChoice() {
 // console.log(getComputerChoice());
 
 function getHumanChoice() {
-  let input = prompt("Make your choice!! (R, P or S)").toUpperCase();
+  // let input = prompt("Make your choice!! (R, P or S)").toUpperCase();
 
   if (input === "R") {
     input = "Rock";

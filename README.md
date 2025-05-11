@@ -7,20 +7,18 @@
 page:
 - [ ] header:
   - [ ] text: Round number
-  - [ ] text: Round result
-- [ ] footer:
-  - [ ] game result
-  - [ ] button: play again! (after game over)
-- [ ] content-upper:
+- [ ] upper-content:
   - [ ] image: computer
   - [ ] text: computer's score
   - [ ] text: computer's choice (emoji)
-  - [ ] buttons: mode switches (normal/ hell)
-- [ ] content-lower:
+- [ ] lower-content:
   - [ ] image: human
   - [ ] text: human's score
   - [ ] text: human's choice (emoji)
+- [ ] footer:
   - [ ] buttons: options (r, p, s) (emoji)
+  - [ ] game result
+  - [ ] buttons: mode switches (normal/ hell)
 
 ### functions
 
@@ -34,6 +32,6 @@ page:
   - Round result
   - Human and computer's score
   - When the game is over, show game result: SB Won The Game!
-- [ ] Game rules:
+- [x] Game rules:
   - The winner get 1 score
   - The game finishes when anyone scores 3!
