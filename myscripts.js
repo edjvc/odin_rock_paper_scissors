@@ -51,7 +51,7 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
-  for (let roundNumber = 1; roundNumber <= 5; roundNumber++) {
+  for (let roundNumber = 1; ; roundNumber++) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
 
@@ -71,17 +71,12 @@ function playGame() {
     console.log(`Winner: <${roundWinner}>`);
     console.log("Computer: " + computerSelection);
     console.log("Human: " + humanSelection);
-    console.log("Computer score: " + computerScore + "    " + "Human score: " + humanScore);
-  }
+    console.log(
+      "Computer score: " + computerScore + "    " + "Human score: " + humanScore
+    );
 
-  if (humanScore > computerScore) {
-    return "You Win!!";
-  } else if (humanScore < computerScore) {
-    return "You Lose!!";
-  } else if (humanScore === computerScore) {
-    return "Tie";
-  } else {
-    return "mistake!";
+    if (humanScore === 3) return "You Win!!";
+    if (computerScore === 3) return "You Lose!!";
   }
 }
 
