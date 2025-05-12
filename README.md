@@ -22,23 +22,23 @@ page:
 
 ### functions
 
-- [ ] Select mode to start the game (normal/ hell).
+- [x] Select mode to start the game (normal/ hell).
   - The game can be restart at anytime when click mode button.
   
-- [ ] Normal mode:
-  - [ ] Human makes choice: click the option buttons.
+- [x] Normal mode:
+  - [x] Human makes choice: click the option buttons.
   - [x] Computer makes choice (randomly).
     - [x] Put 3 options in an array, and make random numbers from 0 to 2 to pick the option (by array index).
 
-- [ ] Hell mode:
-  - [ ] Human makes choice: click the option buttons.
-  - [ ] Computer makes choice depend on human's choice for making sure computer wins every round.
+- [x] Hell mode:
+  - [x] Human makes choice: click the option buttons.
+  - [x] Computer makes choice depend on human's choice for making sure computer wins every round.
   
 - [ ] Show choices from both sides.
 - [ ] Get round result and update information (scores, round number) from both sides.
-- [ ] Game finishes when anyone reaches score 3!
+- [x] Game finishes when anyone reaches score 3!
   - [ ] Show game result.
 
-- [ ] Game rules:
+- [x] Game rules:
   - The winner get 1 score
   - The game finishes when anyone scores 3!
