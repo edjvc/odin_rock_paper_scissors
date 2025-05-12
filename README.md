@@ -5,33 +5,40 @@
 ### UI
 
 page:
-- [ ] header:
-  - [ ] text: Round number
-- [ ] upper-content:
-  - [ ] image: computer
-  - [ ] text: computer's score
-  - [ ] text: computer's choice (emoji)
-- [ ] lower-content:
-  - [ ] image: human
-  - [ ] text: human's score
-  - [ ] text: human's choice (emoji)
-- [ ] footer:
-  - [ ] buttons: options (r, p, s) (emoji)
-  - [ ] game result
-  - [ ] buttons: mode switches (normal/ hell)
+- [x] header:
+  - [x] text: Round number
+- [x] upper-content:
+  - [x] image: computer
+  - [x] text: computer's score
+  - [x] text: computer's choice (emoji)
+- [x] lower-content:
+  - [x] image: human
+  - [x] text: human's score
+  - [x] text: human's choice (emoji)
+- [x] footer:
+  - [x] buttons: options (r, p, s) (emoji)
+  - [x] game result
+  - [x] buttons: mode switches (normal/ hell)
 
 ### functions
 
-- [x] Computer makes choice (randomly).
-  - [x] Put 3 options in an array, and make random numbers from 0 to 2 to pick the option (by array index).
-- [x] Human makes choice (enter in prompt)
-  - [x] Allow to enter either uppercase and lowercase.
-- [x] Show these information:
-  - Round number
-  - Human and computer's choice
-  - Round result
-  - Human and computer's score
-  - When the game is over, show game result: SB Won The Game!
-- [x] Game rules:
+- [ ] Select mode to start the game (normal/ hell).
+  - The game can be restart at anytime when click mode button.
+  
+- [ ] Normal mode:
+  - [ ] Human makes choice: click the option buttons.
+  - [x] Computer makes choice (randomly).
+    - [x] Put 3 options in an array, and make random numbers from 0 to 2 to pick the option (by array index).
+
+- [ ] Hell mode:
+  - [ ] Human makes choice: click the option buttons.
+  - [ ] Computer makes choice depend on human's choice for making sure computer wins every round.
+  
+- [ ] Show choices from both sides.
+- [ ] Get round result and update information (scores, round number) from both sides.
+- [ ] Game finishes when anyone reaches score 3!
+  - [ ] Show game result.
+
+- [ ] Game rules:
   - The winner get 1 score
   - The game finishes when anyone scores 3!
