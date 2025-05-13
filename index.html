@@ -5,11 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./myscripts.js" defer></script>
 </head>
 
 <body>
-  <script src="myscripts.js"></script>
-
+  <div class="header">
+    <div class="round-number">ROUND 1</div>
+  </div>
+  <div class="container computer">
+    <div class="image-container">
+      <img src="./images/computer.png" alt="computer image">
+      <div class="choice"></div>
+    </div>
+    <div class="score-container">
+      <div class="score">0</div>
+    </div>
+  </div>
+  <div class="container human">
+    <div class="image-container">
+      <div class="choice"></div>
+      <img src="./images/human.jpg" alt="computer image">
+    </div>
+    <div class="score-container">
+      <div class="score">0</div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="human-options">
+      <button class="rock">✊</button>
+      <button class="paper">🖐️</button>
+      <button class="scissors">✌️</button>
+    </div>
+    <div class="game-result"></div>
+    <div class="mode">
+      <div class="space-left">👉</div>
+      <button class="normal">NORMAL</button>
+      <button class="hell">HELL</button>
+      <div class="space-right">👈</div>
+    </div>
+  </div>
 </body>
 
 </html>
