@@ -1,4 +1,4 @@
-## rock-paper-scissors v 2 (developing...)
+## rock-paper-scissors v2
 
 ### pseudocode
 
