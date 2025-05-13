@@ -8,6 +8,11 @@ body {
   flex-direction: column;
   font-size: 14px;
   color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(./images/rps-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
 }
 
 .header,
@@ -51,8 +56,8 @@ body {
 }
 
 .container img {
-  width: 200px;
-  height: auto;
+  width: 140px;
+  height: 140px;
 }
 
 .score {
@@ -86,12 +91,14 @@ body {
   font-size: 80px;
   text-align: center;
   margin: 20px;
+  height: 110px;
 }
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .human-options,
@@ -104,14 +111,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .human-options button {
   font-size: 50px;
   height: 80px;
   width: 80px;
-  margin: 0 8px;
-  line-height: 80px;
+  padding-bottom: 10px;
+  /* line-height: 80px; */
   text-align: center;
 }
 
@@ -126,14 +134,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .mode button{
   font-size: 40px;
   height: max-content;
-  margin: 0 20px;
+  margin: 8px;
+}
+
+.space-left,
+.space-right {
+  width: 80px;
+  font-size: 50px;
+  line-height: 80px;
+  margin-top: -10px;
+}
+
+.space-left {
+  text-align: right;
+  margin-right: -12px;
+}
+
+.space-right {
+  text-align: left;
+  margin-left: -12px;
 }
 
 .mode .hell {
   background-color: red;
+}
+
+.mode .hell:hover {
+  background-color: #e40b0b;
 }

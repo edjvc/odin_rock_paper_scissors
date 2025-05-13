@@ -34,10 +34,10 @@ page:
   - [x] Human makes choice: click the option buttons.
   - [x] Computer makes choice depend on human's choice for making sure computer wins every round.
   
-- [ ] Show choices from both sides.
-- [ ] Get round result and update information (scores, round number) from both sides.
+- [x] Show choices from both sides.
+- [x] Get round result and update information (scores, round number) from both sides.
 - [x] Game finishes when anyone reaches score 3!
-  - [ ] Show game result.
+  - [x] Show game result.
 
 - [x] Game rules:
   - The winner get 1 score

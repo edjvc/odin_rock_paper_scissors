@@ -88,9 +88,22 @@ function getRoundWinner(humanChoice, computerChoice) {
   }
 }
 
+const divRoundNumber = document.querySelector(".round-number");
+const divHumanChoice = document.querySelector(".human .choice");
+const divComputerChoice = document.querySelector(".computer .choice");
+const divHumanScore = document.querySelector(".human .score");
+const divComputerScore = document.querySelector(".computer .score");
+const divGameResult = document.querySelector(".game-result");
+const divHeader = document.querySelector(".header");
+const divFooter = document.querySelector(".footer");
+const divSpaceLeft = document.querySelector(".space-left");
+const divSpaceRight = document.querySelector(".space-right");
+const divBody = document.querySelector("body");
 
 async function playGame() {
   let mode = await getMode();
+  divSpaceLeft.textContent = "";
+  divSpaceRight.textContent = "";
   let humanScore = 0;
   let computerScore = 0;
 
@@ -124,27 +137,56 @@ async function playGame() {
       computerScore += 1;
     }
 
-    console.log(`-Round ${roundNumber}-`);
-    console.log(`Winner: <${roundWinner}>`);
-    console.log("Computer: " + computerSelection);
-    console.log("Human: " + humanSelection);
-    console.log(
-      "Computer score: " + computerScore + "    " + "Human score: " + humanScore
-    );
+    function switchOptionToEmoji(option) {
+      if (option === "rock") return "✊";
+      else if (option === "paper") return "🖐️";
+      else if (option === "scissors") return "✌️";
+    }
 
-    function reset(){
+    divRoundNumber.textContent = `ROUND ${roundNumber}`;
+    divHumanChoice.textContent = switchOptionToEmoji(humanSelection);
+    divComputerChoice.textContent = switchOptionToEmoji(computerSelection);
+    divHumanScore.textContent = humanScore;
+    divComputerScore.textContent = computerScore;
+
+    function reset() {
       roundNumber = 0;
       humanScore = 0;
       computerScore = 0;
+      divRoundNumber.textContent = "ROUND 1";
+      divHumanScore.textContent = "0";
+      divComputerScore.textContent = "0";
+      divHumanChoice.textContent = "";
+      divComputerChoice.textContent = "";
+      divGameResult.textContent = "";
+      divSpaceLeft.textContent = "";
+      divSpaceRight.textContent = "";
+      divHeader.removeAttribute("style");
+      divFooter.removeAttribute("style");
+      divBody.removeAttribute("style");
+    }
+
+    function showGameResultEffect(result) {
+      if (result === "win") {
+        divGameResult.textContent = "YOU WIN!!";
+        divHeader.setAttribute("style", "background-color: #2fb936");
+        divFooter.setAttribute("style", "background-color: #2fb936");
+      } else if (result === "lose") {
+        divGameResult.textContent = "YOU LOSE!!";
+        divHeader.setAttribute("style", "background-color: #e24944");
+        divFooter.setAttribute("style", "background-color: #e24944");
+        divBody.setAttribute("style", "background-color:rgba(10, 10, 10, 0.8)");
+      }
+      divSpaceLeft.textContent = "👉";
+      divSpaceRight.textContent = "👈";
     }
 
     if (humanScore === 3) {
-      console.log("You Win!!");
+      showGameResultEffect("win");
       mode = await getMode();
       reset();
-    }
-    if (computerScore === 3) {
-      console.log("You Lose!!");
+    } else if (computerScore === 3) {
+      showGameResultEffect("lose");
       mode = await getMode();
       reset();
     }
